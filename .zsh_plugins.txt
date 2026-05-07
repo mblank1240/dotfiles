@@ -1,0 +1,17 @@
+# Autosuggestions - suggests commands as you type based on history
+zsh-users/zsh-autosuggestions
+
+# Syntax highlighting - colors commands red/green as you type
+zsh-users/zsh-syntax-highlighting
+
+# Better completions
+zsh-users/zsh-completions
+
+# History search - Ctrl+R fuzzy search through command history
+ohmyzsh/ohmyzsh path:plugins/history-substring-search
+
+# z - jump to frecent directories by typing z dirname
+rupa/z
+
+# fzf tab - replaces default tab completion with fzf fuzzy finder
+Aloxaf/fzf-tab
