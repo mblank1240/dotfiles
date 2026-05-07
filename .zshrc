@@ -12,3 +12,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
     source /usr/share/antidote/antidote.zsh
 fi
 antidote load ~/.config/antidote/.zsh_plugins.txt
+
+
+# Aliases
+alias dots='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
