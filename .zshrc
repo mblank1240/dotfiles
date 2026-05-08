@@ -9,7 +9,7 @@ autoload -Uz compinit && compinit
 if [[ "$(uname)" == "Darwin" ]]; then
     source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 elif [[ "$(uname)" == "Linux" ]]; then
-    source /usr/share/antidote/antidote.zsh
+    source ~/.antidote/antidote.zsh
 fi
 antidote load ~/.config/antidote/.zsh_plugins.txt
 

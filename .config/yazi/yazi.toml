@@ -1,0 +1,22 @@
+[opener]
+archive = [
+  { run = 'unar "%1"', desc = "Extract here" },
+]
+text = [
+  { run = 'nvim "%1"', block = true, desc = "Edit in Neovim" },
+]
+
+[open]
+rules = [
+  { mime = "application/zip", use = "archive" },
+  { mime = "application/x-rar*", use = "archive" },
+  { mime = "application/x-7z*", use = "archive" },
+  { mime = "application/x-tar", use = "archive" },
+  { mime = "application/gzip", use = "archive" },
+  { mime = "application/x-bzip*", use = "archive" },
+  { mime = "application/x-xz", use = "archive" },
+  { mime = "text/*", use = "text" },
+  { mime = "application/json", use = "text" },
+  { mime = "application/toml", use = "text" },
+  { mime = "application/xml", use = "text" },
+]
