@@ -16,7 +16,7 @@ This repo uses a **bare git repository** pointed at `$HOME` as its working tree.
 
 **Arch Linux:**
 ```bash
-sudo pacman -S git openssh zsh neovim tmux yazi fzf tree-sitter tree-sitter-cli base-devel rust
+sudo pacman -S git openssh zsh neovim tmux yazi fzf tree-sitter tree-sitter-cli base-devel rust eza bat ripgrep fzf
 yay -S antidote stylua
 ```
 
