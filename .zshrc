@@ -48,3 +48,7 @@ function y() {
 }
 
 export PATH="$HOME/.local/bin:$PATH"
+
+[[ -f ~/.config/zsh/valheim.zsh ]] && source ~/.config/zsh/valheim.zsh
+
+export TERM=xterm-256color
