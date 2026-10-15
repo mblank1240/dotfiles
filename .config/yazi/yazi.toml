@@ -19,4 +19,5 @@ rules = [
   { mime = "application/json", use = "text" },
   { mime = "application/toml", use = "text" },
   { mime = "application/xml", use = "text" },
+  { mime = "application/md", use = "text" },
 ]

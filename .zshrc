@@ -26,7 +26,7 @@ alias grep='rg'
 alias find='fd'
 alias top='btop'
 alias vim='nvim'
-alias y='yazi'
+#alias y='yazi'
 
 # Git shortcuts
 alias g='git'
@@ -37,3 +37,14 @@ alias lg='lazygit'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ~='cd ~'
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+export PATH="$HOME/.local/bin:$PATH"
