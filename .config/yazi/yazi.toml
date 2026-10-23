@@ -1,9 +1,9 @@
 [opener]
 archive = [
-  { run = 'unar "$1"', desc = "Extract here" },
+  { run = 'unar %s1', desc = "Extract here" },
 ]
 text = [
-  { run = 'nvim "$@"', block = true, desc = "Edit in Neovim" },
+  { run = 'nvim %s', block = true, desc = "Edit in Neovim" },
 ]
 
 [open]
@@ -19,5 +19,4 @@ rules = [
   { mime = "application/json", use = "text" },
   { mime = "application/toml", use = "text" },
   { mime = "application/xml", use = "text" },
-  { mime = "application/md", use = "text" },
 ]
