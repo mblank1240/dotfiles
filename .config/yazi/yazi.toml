@@ -1,9 +1,9 @@
 [opener]
 archive = [
-  { run = 'unar "%1"', desc = "Extract here" },
+  { run = 'unar "$1"', desc = "Extract here" },
 ]
 text = [
-  { run = 'nvim "%1"', block = true, desc = "Edit in Neovim" },
+  { run = 'nvim "$@"', block = true, desc = "Edit in Neovim" },
 ]
 
 [open]
