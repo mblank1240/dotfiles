@@ -1,0 +1,10 @@
+{
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "bash /home/morgan/.claude/statusline-command.sh"
+  },
+  "tui": "fullscreen",
+  "theme": "dark",
+  "agentPushNotifEnabled": true
+}
