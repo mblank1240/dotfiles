@@ -5,9 +5,14 @@ archive = [
 text = [
   { run = 'nvim %s', block = true, desc = "Edit in Neovim" },
 ]
+markdown = [
+  { run = 'glow -p %s', block = true, desc = "View with Glow" },
+  { run = 'nvim %s', block = true, desc = "Edit in Neovim" },
+]
 
 [open]
 rules = [
+  { url = "*.{md,markdown}", use = "markdown" },
   { mime = "application/zip", use = "archive" },
   { mime = "application/x-rar*", use = "archive" },
   { mime = "application/x-7z*", use = "archive" },

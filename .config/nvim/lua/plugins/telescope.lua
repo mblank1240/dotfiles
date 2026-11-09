@@ -37,7 +37,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
       cond = function() return vim.fn.executable 'make' == 1 end,
     },
     { 'nvim-telescope/telescope-ui-select.nvim' },
-    { 'nvim-telescope/telescope-file-browser.nvim' },
 
     -- Useful for getting pretty icons, but requires a Nerd Font.
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
@@ -83,17 +82,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
       },
       extensions = {
         ['ui-select'] = { require('telescope.themes').get_dropdown() },
-        file_browser = {
-          hijack_netrw = false, -- leave directory opening to neo-tree
-          grouped = true, -- folders listed before files
-        },
       },
     }
 
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
-    pcall(require('telescope').load_extension, 'file_browser')
 
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
@@ -108,13 +102,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-    vim.keymap.set('n', '<leader>sb', function() require('telescope').extensions.file_browser.file_browser() end, { desc = '[S]earch file [B]rowser' })
-    vim.keymap.set(
-      'n',
-      '<leader>sB',
-      function() require('telescope').extensions.file_browser.file_browser { path = '%:p:h', select_buffer = true } end,
-      { desc = '[S]earch file [B]rowser (current file dir)' }
-    )
 
     -- This runs on LSP attach per buffer (see main LSP attach function in 'neovim/nvim-lspconfig' config for more info,
     -- it is better explained there). This allows easily switching between pickers if you prefer using something else!

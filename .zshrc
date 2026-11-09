@@ -33,6 +33,13 @@ alias g='git'
 alias gs='git status'
 alias lg='lazygit'
 
+# Markdown viewer (falls back to less if glow isn't installed)
+if command -v glow >/dev/null; then
+    alias md='glow -p'
+else
+    alias md='${PAGER:-less}'
+fi
+
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
