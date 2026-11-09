@@ -1,1 +1,4 @@
 .config/antidote/.zsh_plugins.zsh
+.config/tmux/plugins/
+.tmux/
+.DS_Store
