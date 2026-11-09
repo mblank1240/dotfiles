@@ -283,26 +283,18 @@ rtp:prepend(lazypath)
 --     mini.lua           - mini.ai textobjects, mini.surround, mini.statusline
 --     treesitter.lua     - Tree-sitter parsers for highlighting & indentation
 --
---   lua/kickstart/plugins/ (optional extras, enabled/disabled below)
 --     neo-tree.lua           - file tree sidebar (<leader>e / <leader>o)
 --     vim-tmux-navigator.lua - seamless <C-hjkl> movement between nvim splits and tmux panes
 --     scrollEOF.lua          - keeps `scrolloff` padding working at the end of the file
---     debug.lua              - nvim-dap debugger UI (disabled)
---     indent_line.lua        - indentation guides (disabled)
---     lint.lua               - nvim-lint linters (disabled)
---     autopairs.lua          - auto-close brackets/quotes (disabled)
---     gitsigns.lua           - extra gitsigns keymaps (disabled)
+--
+--   lua/disabled-plugins/ (NOT loaded; move into lua/plugins/ to enable)
+--     debug.lua              - nvim-dap debugger UI
+--     indent_line.lua        - indentation guides
+--     lint.lua               - nvim-lint linters
+--     autopairs.lua          - auto-close brackets/quotes
+--     gitsigns-keymaps.lua   - extra gitsigns keymaps (requires gitsigns.lua)
 require('lazy').setup({
   { import = 'plugins' },
-
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
-  require 'kickstart.plugins.vim-tmux-navigator',
-  require 'kickstart.plugins.scrollEOF',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommended keymaps
 }, { ---@diagnostic disable-line: missing-fields
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
