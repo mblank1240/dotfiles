@@ -21,6 +21,7 @@ rules = [
   { mime = "application/x-bzip*", use = "archive" },
   { mime = "application/x-xz", use = "archive" },
   { mime = "text/*", use = "text" },
+  { mime = "inode/{empty,x-empty}", use = "text" },
   { mime = "application/json", use = "text" },
   { mime = "application/toml", use = "text" },
   { mime = "application/xml", use = "text" },
