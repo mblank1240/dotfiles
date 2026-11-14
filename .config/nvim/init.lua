@@ -282,13 +282,12 @@ rtp:prepend(lazypath)
 --     todo-comments.lua  - highlights TODO/NOTE/FIX/etc. in comments
 --     mini.lua           - mini.ai textobjects, mini.surround, mini.statusline
 --     treesitter.lua     - Tree-sitter parsers for highlighting & indentation
---
+--     debug.lua              - nvim-dap debugger UI
 --     neo-tree.lua           - file tree sidebar (<leader>e / <leader>o)
 --     vim-tmux-navigator.lua - seamless <C-hjkl> movement between nvim splits and tmux panes
 --     scrollEOF.lua          - keeps `scrolloff` padding working at the end of the file
 --
 --   lua/disabled-plugins/ (NOT loaded; move into lua/plugins/ to enable)
---     debug.lua              - nvim-dap debugger UI
 --     indent_line.lua        - indentation guides
 --     lint.lua               - nvim-lint linters
 --     autopairs.lua          - auto-close brackets/quotes
